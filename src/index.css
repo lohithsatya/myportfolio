@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to the top of the file, after @tailwind imports */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Star Animation */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: starAnimation linear;
+  box-shadow: 0 0 3px #fff,
+              0 0 6px #fff,
+              0 0 9px #fff;
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: translateX(100vw) translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw) translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Additional glow effects for existing elements */
+.hero-glow {
+  animation: heroGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  from {
+    box-shadow: 0 0 20px -10px rgba(139, 92, 246, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.8);
+  }
+}
+
+/* Profile Image Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes rotateGlow {
+  0% {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.5),
+                0 0 35px -10px rgba(96, 165, 250, 0.4);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px -5px rgba(96, 165, 250, 0.5),
+                0 0 40px -10px rgba(139, 92, 246, 0.4);
+    border-color: rgba(96, 165, 250, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.5),
+                0 0 35px -10px rgba(96, 165, 250, 0.4);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+}
+
+.profile-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-glow {
+  animation: rotateGlow 4s ease-in-out infinite;
+}
+
+.profile-container:hover .profile-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-container:hover .profile-glow {
+  animation: rotateGlow 3s ease-in-out infinite;
+}
+
+/* Skill Bar Animation */
+@keyframes skillFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-skill-fill {
+  animation: skillFill 1s ease-out forwards;
+}
+
+/* Add animation delay for each skill */
+.skill-item:nth-child(1) .animate-skill-fill { animation-delay: 0.1s; }
+.skill-item:nth-child(2) .animate-skill-fill { animation-delay: 0.2s; }
+.skill-item:nth-child(3) .animate-skill-fill { animation-delay: 0.3s; }
+.skill-item:nth-child(4) .animate-skill-fill { animation-delay: 0.4s; } 
