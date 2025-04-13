@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaShieldAlt, FaLock, FaBug } from 'react-icons/fa';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaShieldAlt, FaLock, FaBug, FaRobot } from 'react-icons/fa';
+import { SiExpress, SiMongodb, SiGithub, SiLinux } from 'react-icons/si';
 
 const Skills = () => {
   const skillCategories = [
@@ -31,6 +31,23 @@ const Skills = () => {
         { name: 'Penetration Testing', icon: <FaShieldAlt className="text-red-500" />, level: 70 },
         { name: 'Security Auditing', icon: <FaLock className="text-yellow-500" />, level: 72 }
       ]
+    },
+    {
+      title: 'Machine Learning',
+      color: 'orange',
+      skills: [
+        { name: 'Python', icon: <FaRobot className="text-[#FFD43B]" />, level: 80 },
+        { name: 'TensorFlow', icon: <FaRobot className="text-[#FF6F00]" />, level: 75 },
+        { name: 'Data Analysis', icon: <FaRobot className="text-[#FF6F00]" />, level: 70 }
+      ]
+    },
+    {
+      title: 'Version Control',
+      color: 'cyan',
+      skills: [
+        { name: 'Git', icon: <SiGithub className="text-[#F1502F]" />, level: 85 },
+        { name: 'Linux', icon: <SiLinux className="text-[#FCC624]" />, level: 80 }
+      ]
     }
   ];
 
@@ -42,10 +59,10 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-400 transition-all duration-300">
             My Skills
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             I specialize in full-stack development with a focus on modern web technologies and security practices.
           </p>
@@ -85,4 +102,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

@@ -13,11 +13,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'HOME', href: '#home' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'SKILLS', href: '#skills' },
+    { name: 'PROJECTS', href: '#projects' },
+    { name: 'CONTACT', href: '#contact' },
   ];
 
   return (
@@ -37,7 +37,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
+                className="text-gray-300 hover:text-white transition-colors duration-300 text-lg font-bold uppercase tracking-wider"
               >
                 {link.name}
               </a>
@@ -66,7 +66,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                className="block py-2 text-gray-300 hover:text-white transition-colors duration-300 text-lg font-bold uppercase tracking-wider"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}

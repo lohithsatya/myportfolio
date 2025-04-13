@@ -42,12 +42,12 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-            Get In Touch
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-400 transition-all duration-300">
+            Contact Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Feel free to reach out for collaborations or just a friendly hello!
+            Let's work together! Feel free to reach out for collaborations or just a friendly hello.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-white mb-4">Social Links</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/lohithsatya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -136,7 +136,7 @@ const Contact = () => {
                   <FaGithub className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/lohith-bommana-b0ab92294/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -144,7 +144,7 @@ const Contact = () => {
                   <FaLinkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://twitter.com/yourusername"
+                  href="https://twitter.com/lohithsatya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"

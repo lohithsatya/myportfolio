@@ -1,0 +1,100 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-text {
+  display: inline-block;
+  animation: slideInFromRight 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+@keyframes revealLetter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.letter-reveal {
+  display: inline-block;
+  min-height: 1.2em;
+}
+
+.reveal-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: revealLetter 0.5s forwards;
+  color: #e9d5ff; /* Light purple color */
+}
+
+/* Add a subtle hover effect for each letter */
+.reveal-letter:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Cursor blink animation */
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Profile animations */
+.profile-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-glow {
+  animation: rotateGlow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes rotateGlow {
+  0% {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.5),
+                0 0 35px -10px rgba(96, 165, 250, 0.4);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px -5px rgba(96, 165, 250, 0.5),
+                0 0 40px -10px rgba(139, 92, 246, 0.4);
+    border-color: rgba(96, 165, 250, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.5),
+                0 0 35px -10px rgba(96, 165, 250, 0.4);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+} 
